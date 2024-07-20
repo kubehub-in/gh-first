@@ -1,0 +1,16 @@
+name: First Github Actions Job
+on: [push]
+  
+jobs:
+  runs-shell-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a simple message
+        run: echo "Hi There!"
+      - name: Multiple Commands
+        run: |-
+            node -v
+            npm -v
+            java -v
+            mvn -v
+        
