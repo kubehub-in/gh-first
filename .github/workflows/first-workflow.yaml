@@ -13,4 +13,6 @@ jobs:
             npm -v
             javac --version
             mvn -v
+            uname -a
+            cat /etc/lsb-release
         
