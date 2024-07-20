@@ -11,6 +11,6 @@ jobs:
         run: |-
             node -v
             npm -v
-            java -v
+            javac --version
             mvn -v
         
