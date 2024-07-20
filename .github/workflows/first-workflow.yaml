@@ -13,6 +13,7 @@ jobs:
             source "$HOME/.sdkman/bin/sdkman-init.sh"
             sdk install java 22.0.2-amzn
             sdk install maven
+            javac -version
       - name: Multiple Commands
         run: |-
             node -v
