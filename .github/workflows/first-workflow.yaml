@@ -7,14 +7,12 @@ jobs:
     steps:
       - name: Print a simple message
         run: echo "Hi There!"
-      - name: Installing SDKMAN
+      - name: Installing SDKMAN, JAVA AND MAVEN
         run: |-
             curl -s "https://get.sdkman.io" | bash
             source "$HOME/.sdkman/bin/sdkman-init.sh"
-      - name: Installing Java 21
-        run: sdk install java 22.0.2-amzn
-      - name: Installing Maven
-        run: sdk install maven
+            sdk install java 22.0.2-amzn
+            sdk install maven
       - name: Multiple Commands
         run: |-
             node -v
