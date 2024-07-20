@@ -7,6 +7,10 @@ jobs:
     steps:
       - name: Print a simple message
         run: echo "Hi There!"
+      - name: Installing Java 21
+        run: sdk install java 22.0.2-amzn
+      - name: Installing Maven
+        run: sdk install maven
       - name: Multiple Commands
         run: |-
             node -v
