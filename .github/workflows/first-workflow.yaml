@@ -27,4 +27,9 @@ jobs:
             mvn -v
             uname -a
             cat /etc/lsb-release
+  parallel-job-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Print Macos version
+        run: sw_vers
         
