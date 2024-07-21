@@ -32,4 +32,11 @@ jobs:
     steps:
       - name: Print Macos version
         run: sw_vers
+  dependent-job-windows:
+    runs-on: windows-latest
+    needs: runs-shell-script
+    steps:
+      - name: Prints PowerShell
+        run: Write-Output "Hi There!"
+
         
