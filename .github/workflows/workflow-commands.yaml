@@ -1,0 +1,16 @@
+name: Workflow Commands
+on: [push]
+
+jobs:
+  GithubActions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Group Logs
+        run: |-
+            echo "::group::My Group"
+            echo "Password: ::add-mask::$PASSWORD"
+            echo "::endgroup::"
+      - name: Echo Secret
+        run: echo "$PASSWORD"
+
+        
