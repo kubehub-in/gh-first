@@ -1,0 +1,14 @@
+name: Hello World Action
+on: [push]
+
+jobs:
+  HelloWorldAction:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hell World Action call
+        id: hwActionId
+        uses: actions/hello-world-javascript-action@319435519c77d9858289ca465032731e22c5416c
+        with:
+          who-to-greet: "Jay"
+      - name: Output Action Result
+        run: echo "${{steps.hwActionId.outputs.time}}"

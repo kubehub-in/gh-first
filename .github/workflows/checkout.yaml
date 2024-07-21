@@ -16,6 +16,6 @@ jobs:
             git checkout main
       - name: List All Files
         run: ls -a
-      - name: Starting node aolication 
+      - name: Starting node application 
         run: npm start
      
