@@ -23,7 +23,7 @@ jobs:
         run: |-
             node -v
             npm -v
-            java --version
+            javac --version
             mvn -v
             uname -a
             cat /etc/lsb-release
