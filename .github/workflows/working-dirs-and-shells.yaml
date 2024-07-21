@@ -16,6 +16,11 @@ jobs:
             echo $env:GITHUB_SHA
             echo $env:GITHUB_REPOSITORY
             echo $env:GITHUB_WORKSPACE
+      - name: Python Shell
+        shell: Python
+        run: |-
+            import platform 
+            print(platform.processor())
   display-cwd-info-ubuntu-bash:
     runs-on: ubuntu-latest
     defaults:
@@ -29,6 +34,11 @@ jobs:
             echo $GITHUB_SHA
             echo $GITHUB_REPOSITORY
             echo $GITHUB_WORKSPACE
+      - name: Python Shell
+        shell: Python
+        run: |-
+            import platform 
+            print(platform.processor())
   display-cwd-info-windows:
     runs-on: windows-latest
     steps:
@@ -39,6 +49,11 @@ jobs:
             echo $env:GITHUB_SHA
             echo $env:GITHUB_REPOSITORY
             echo $env:GITHUB_WORKSPACE
+      - name: Python Shell
+        shell: Python
+        run: |-
+            import platform 
+            print(platform.processor())
   display-cwd-info-windows-bash:
     runs-on: windows-latest
     defaults:
@@ -52,4 +67,9 @@ jobs:
             echo $GITHUB_SHA
             echo $GITHUB_REPOSITORY
             echo $GITHUB_WORKSPACE
+      - name: Python Shell
+        shell: Python
+        run: |-
+            import platform 
+            print(platform.processor())
             
