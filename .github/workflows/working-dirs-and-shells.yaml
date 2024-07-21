@@ -10,9 +10,9 @@ jobs:
       - name: CWD Info
         run: |-
             pwd
-            echo $GITHUB_SHA
-            echo $GITHUB_REPOSITORY
-            echo $GITHUB_WORKSPACE
+            echo $env:GITHUB_SHA
+            echo $env:GITHUB_REPOSITORY
+            echo $env:GITHUB_WORKSPACE
   display-cwd-info-windows:
     runs-on: windows-latest
 
