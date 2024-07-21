@@ -2,7 +2,7 @@ name: Working Dirs and Sheels
 on: [push]
 defaults:
   run:
-    shell: bash
+    shell: pwsh
 jobs:
   display-cwd-info-ubuntu:
     runs-on: ubuntu-latest
