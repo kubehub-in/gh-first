@@ -1,0 +1,27 @@
+name: Working Dirs and Sheels
+on: [push]
+defaults:
+  run:
+    shell: bash
+jobs:
+  display-cwd-info-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CWD Info
+        run: |-
+            pwd
+            echo $GITHUB_SHA
+            echo $GITHUB_REPOSITORY
+            echo $GITHUB_WORKSPACE
+  display-cwd-info-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: CWD Info
+        run: |-
+            Get-Location
+            dir
+            echo $env:GITHUB_SHA
+            echo $env:GITHUB_REPOSITORY
+            echo $env:GITHUB_WORKSPACE
+            
