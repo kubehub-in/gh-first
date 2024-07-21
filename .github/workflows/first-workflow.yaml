@@ -7,13 +7,18 @@ jobs:
     steps:
       - name: Print a simple message
         run: echo "Hi There!"
-      - name: Installing SDKMAN, JAVA AND MAVEN
-        run: |-
-            curl -s "https://get.sdkman.io" | bash
-            source "$HOME/.sdkman/bin/sdkman-init.sh"
-            sdk install java 22.0.2-amzn
-            sdk install maven
-            javac -version
+      #- name: Installing SDKMAN, JAVA AND MAVEN
+       # run: |-
+           # curl -s "https://get.sdkman.io" | bash
+           # source "$HOME/.sdkman/bin/sdkman-init.sh"
+           # sdk install java 22.0.2-amzn
+            #sdk install maven
+            #javac -version
+      - uses: actions/setup-java@v4.2.1
+        with:
+          distribution: 'corretto'
+          java-version: '22'
+          cache: 'maven'
       - name: Multiple Commands
         run: |-
             node -v
