@@ -47,8 +47,6 @@ jobs:
     steps:
       - name: CWD Info
         run: |-
-            Get-Location
-            dir
             pwd
             ls
             echo $GITHUB_SHA
