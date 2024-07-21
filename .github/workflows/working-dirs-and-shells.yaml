@@ -4,18 +4,33 @@ defaults:
   run:
     shell: pwsh
 jobs:
-  display-cwd-info-ubuntu:
+  display-cwd-info-ubuntu-pwsh:
     runs-on: ubuntu-latest
     steps:
       - name: CWD Info
         run: |-
             pwd
+            ls
+            Get-Location
+            dir
             echo $env:GITHUB_SHA
             echo $env:GITHUB_REPOSITORY
             echo $env:GITHUB_WORKSPACE
+  display-cwd-info-ubuntu-bash:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: CWD Info
+        run: |-
+            pwd
+            ls
+            echo $GITHUB_SHA
+            echo $GITHUB_REPOSITORY
+            echo $GITHUB_WORKSPACE
   display-cwd-info-windows:
     runs-on: windows-latest
-
     steps:
       - name: CWD Info
         run: |-
@@ -24,4 +39,19 @@ jobs:
             echo $env:GITHUB_SHA
             echo $env:GITHUB_REPOSITORY
             echo $env:GITHUB_WORKSPACE
+  display-cwd-info-windows-bash:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: CWD Info
+        run: |-
+            Get-Location
+            dir
+            pwd
+            ls
+            echo $GITHUB_SHA
+            echo $GITHUB_REPOSITORY
+            echo $GITHUB_WORKSPACE
             
