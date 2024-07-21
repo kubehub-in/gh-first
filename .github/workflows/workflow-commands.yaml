@@ -5,12 +5,13 @@ jobs:
   GithubActions:
     runs-on: ubuntu-latest
     steps:
+      - name: Adding Mask
+        run: echo "::add-mask::${{vars.PASSWORD}}"
       - name: Group Logs
         run: |-
             echo "::group::My Group"
-            echo "Password: ::add-mask::$PASSWORD"
+            echo "Password: ${{vars.PASSWORD}}"
             echo "::endgroup::"
-      - name: Echo Secret
-        run: echo "$PASSWORD"
+
 
         
