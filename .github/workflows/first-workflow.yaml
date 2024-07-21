@@ -38,5 +38,7 @@ jobs:
     steps:
       - name: Prints PowerShell
         run: Write-Output "Hi There!"
+      - name: Prints Windows Version
+        run: systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version" 
 
         
