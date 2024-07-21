@@ -12,6 +12,10 @@ jobs:
             echo "::group::My Group"
             echo "Password: ${{vars.PASSWORD}}"
             echo "::endgroup::"
+      - name: Docker Version
+        run: docker version
+      - name: Kubernetes Version
+        run: kubectl version
 
 
         
