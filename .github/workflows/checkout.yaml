@@ -1,4 +1,4 @@
-name: Checkout $GITHUB_REPOSITORY
+name: Checkout REPOSITORY
 on: [push]
 
 jobs:
@@ -16,3 +16,6 @@ jobs:
             git checkout main
       - name: List All Files
         run: ls -a
+      - name: Starting node aolication 
+        run: npm start
+     
