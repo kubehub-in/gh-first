@@ -18,7 +18,7 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: '22'
-          cache: 'maven'
+          #cache: 'maven'
       - name: Multiple Commands
         run: |-
             node -v
