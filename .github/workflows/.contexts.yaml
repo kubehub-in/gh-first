@@ -1,0 +1,13 @@
+name: Print Contexts
+on: [push, workflow_dispatch]
+
+jobs:
+  display-contexts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display contexts
+        run: |-
+            echo "${{toJson(job)}}"
+            echo "${{toJson(secrets)}}"
+            echo "${{toJson(steps)}}"
+            echo "${{toJson(github)}}"

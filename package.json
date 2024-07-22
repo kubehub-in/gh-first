@@ -1,12 +1,21 @@
 {
   "name": "gh-action-first",
   "version": "1.0.0",
-  "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "node ./app.js"
+    "start": "tsx --env-file=.env ./app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@octokit/rest": "^21.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "tsx": "^4.16.2"
+  }
 }
