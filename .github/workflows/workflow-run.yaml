@@ -1,0 +1,11 @@
+name: WorkFlow Run
+on:
+    workflow_run: 
+        types: completed
+        workflows: [First Github Actions Job]
+jobs:
+    echo-string:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print completed message after trigger
+              run: echo "I was triggered because 'First Github Actions Job' was triggered."
