@@ -39,4 +39,4 @@ jobs:
           echo "Number: ${{ inputs.times }}"
           echo "Option: ${{ inputs.version }}"
           echo "Boolean: ${{ inputs.run }}"
-          echo "Environment: ${{ inputs.environment }}"
+          echo "Environment: ${{ inputs.env }}"
