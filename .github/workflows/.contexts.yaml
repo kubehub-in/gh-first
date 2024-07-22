@@ -1,6 +1,6 @@
 name: Print Contexts
 on: [push, workflow_dispatch]
-
+run-name: "Contexts by @${{github.actor}}, event: ${{github.event_name}}"
 jobs:
   display-contexts:
     runs-on: ubuntu-latest
