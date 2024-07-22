@@ -8,8 +8,4 @@ jobs:
       - name: display contexts
         shell: pwsh
         run: |-
-            #echo "${{toJson(job)}}"
-            #echo "${{toJson(secrets)}}"
-            #echo "${{toJson(steps)}}"
-            #echo "${{toJson(github)}}"
             winget show Microsoft.VisualStudioCode
