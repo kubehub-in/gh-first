@@ -3,9 +3,11 @@ on: [push, workflow_dispatch]
 
 jobs:
   display-contexts:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: display contexts
-        shell: pwsh
         run: |-
-            winget show Microsoft.VisualStudioCode
+            echo "${{toJson(job)}}"
+            echo "${{toJson(secrets)}}"
+            echo "${{toJson(steps)}}"
+            echo "${{toJson(github)}}"
