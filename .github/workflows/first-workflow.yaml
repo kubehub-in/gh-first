@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java-versions: ['1.2','11', '17', '21']
+        java-versions: ['2','11', '17', '21']
       #max-parallel: 1
       #fail-fast: false
     steps:
