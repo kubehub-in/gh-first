@@ -1,5 +1,5 @@
 name: First Github Actions Job
-on: workflow_dispatch
+on: [workflow_dispatch, push]
   
 jobs:
   runs-shell-script:
