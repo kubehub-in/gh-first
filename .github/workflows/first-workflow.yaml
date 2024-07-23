@@ -8,7 +8,7 @@ jobs:
       matrix:
         java-versions: ['2','11', '17', '21']
       #max-parallel: 1
-      #fail-fast: false
+      fail-fast: false
     steps:
       - name: Print a simple message
         run: echo "Hi There!"
