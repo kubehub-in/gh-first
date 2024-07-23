@@ -1,9 +1,12 @@
 name: First Github Actions Job
-on: [push]
+on: workflow_dispatch
   
 jobs:
   runs-shell-script:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-versions: ['11', '17', '21']
     steps:
       - name: Print a simple message
         run: echo "Hi There!"
@@ -17,7 +20,7 @@ jobs:
       - uses: actions/setup-java@v4.2.1
         with:
           distribution: 'corretto'
-          java-version: '22'
+          java-version: ${{matrix.java-versions}}
           #cache: 'maven'
       - name: Multiple Commands
         run: |-
