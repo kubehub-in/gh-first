@@ -3,7 +3,7 @@ on: push
 
 jobs:
   calling-resuable-wf:
-    uses: ./.github/workflows/reusable-workout.yaml
+    uses: ./.github/workflows/reusable-workflow.yaml
   using-called-wf:
     needs: calling-resuable-wf
     runs-on: ubuntu-latest
