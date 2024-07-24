@@ -1,0 +1,11 @@
+name: Using Reusable Workout
+on: push
+
+jobs:
+  calling-resuable-wf:
+    uses: ./.github/workflows/reusable-workout.yaml
+  using-called-wf:
+    needs: calling-resuable-wf
+    runs-on: ubuntu-latest
+    steps:
+      - run: ${{ needs.calling-resuable-wf.outputs.date }}
