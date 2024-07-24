@@ -8,4 +8,4 @@ jobs:
     needs: calling-resuable-wf
     runs-on: ubuntu-latest
     steps:
-      - run: ${{ needs.calling-resuable-wf.outputs.date }}
+      - run: echo ${{ needs.calling-resuable-wf.outputs.date }}
