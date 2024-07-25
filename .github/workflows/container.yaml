@@ -27,6 +27,5 @@ jobs:
       - name: Container running in step (Lof text.txt file content)
         uses: docker://amazoncorretto:22-alpine3.20
         with:
-          entrypoint: cat
-          args: text.txt
+          entrypoint: cat text.txt
 
