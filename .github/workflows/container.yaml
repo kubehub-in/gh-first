@@ -21,7 +21,6 @@ jobs:
       - name: Container running in step (Print Java version)
         uses: docker://amazoncorretto:22-alpine3.20
         with:
-          entrypoint: |-
-            /usr/bin/javac --version
-            /usr/bin/java --version
+          entrypoint: /usr/bin/java
+          args: --version
 
