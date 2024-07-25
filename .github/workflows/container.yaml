@@ -9,6 +9,7 @@ jobs:
         run: |-
             node -v
             cat /etc/lsb-release
+      - run: echo "Sone text" > text.txt
   check-container-version:
     runs-on: ubuntu-latest
     container: 
@@ -23,4 +24,9 @@ jobs:
         with:
           entrypoint: /usr/bin/java
           args: --version
+      - name: Container running in step (Lof text.txt file content)
+        uses: docker://amazoncorretto:22-alpine3.20
+        with:
+          entrypoint: cat
+          args: text.txt
 
