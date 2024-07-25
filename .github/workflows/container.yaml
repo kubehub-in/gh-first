@@ -1,0 +1,21 @@
+name: Container version check
+on: [workflow_dispatch]
+
+jobs: 
+  check-native-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Node version and OS Version on VM
+        run: |-
+            node -v
+            cat /etc/lsb-release
+  check-container-version:
+    runs-on: ubuntu-latest
+    container: 
+        image: node:current-alpine3.19
+    steps:
+      - name: Print Node version and OS Version on Container
+        run: |-
+            node -v
+            cat /etc/os-release
+
