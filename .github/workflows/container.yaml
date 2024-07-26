@@ -24,8 +24,6 @@ jobs:
         with:
           entrypoint: /usr/bin/java
           args: --version
-      - name: Container running in step (Lof text.txt file content)
-        uses: docker://amazoncorretto:22-alpine3.20
-        with:
-          entrypoint: cat text.txt
+  
+
 
